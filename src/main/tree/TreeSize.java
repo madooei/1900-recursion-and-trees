@@ -8,9 +8,7 @@ public final class TreeSize {
   }
 
   public static <T> int size(Node<T> node) {
-    if (node == null) {
-      return 0;  // base case: an empty tree has no nodes
-    }
-    return 1 + size(node.left) + size(node.right);  // this node, plus each subtree
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }

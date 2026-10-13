@@ -12,12 +12,8 @@ public final class Traversals {
 
   // Adds the values of the tree rooted at node to result, in pre-order.
   private static <T> void preOrder(Node<T> node, List<T> result) {
-    if (node == null) {
-      return;  // base case: an empty tree has nothing to visit
-    }
-    result.add(node.value);  // visit
-    preOrder(node.left, result);
-    preOrder(node.right, result);
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Returns the values of the tree rooted at root in pre-order. Returns an
@@ -30,12 +26,8 @@ public final class Traversals {
 
   // Adds the values of the tree rooted at node to result, in in-order.
   private static <T> void inOrder(Node<T> node, List<T> result) {
-    if (node == null) {
-      return;
-    }
-    inOrder(node.left, result);
-    result.add(node.value);  // visit
-    inOrder(node.right, result);
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Returns the values of the tree rooted at root in in-order. Returns an
@@ -48,12 +40,8 @@ public final class Traversals {
 
   // Adds the values of the tree rooted at node to result, in post-order.
   private static <T> void postOrder(Node<T> node, List<T> result) {
-    if (node == null) {
-      return;
-    }
-    postOrder(node.left, result);
-    postOrder(node.right, result);
-    result.add(node.value);  // visit
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Returns the values of the tree rooted at root in post-order. Returns an
