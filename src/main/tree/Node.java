@@ -5,12 +5,12 @@ package tree;
  *
  * @param <T> the type of value held in the node.
  */
-class Node<T> {
-  T value;
-  Node<T> left;
-  Node<T> right;
+public class Node<T> {
+  public T value;
+  public Node<T> left;
+  public Node<T> right;
 
-  Node(T value) {
+  public Node(T value) {
     this.value = value;
   }
 }

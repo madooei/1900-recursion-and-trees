@@ -36,6 +36,7 @@ public final class Main {
     // Measurements.
     System.out.println("size:   " + TreeSize.size(root)); // expect 9
     System.out.println("height: " + TreeHeight.height(root)); // expect 3
+    System.out.println("depth of 3: " + TreeDepth.depth(root, three)); // expect 3
 
     System.out.print("pre-order:   ");
     printAll(Traversals.preOrder(root));
