@@ -3,7 +3,7 @@ package tree;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/** Tests for the height of a binary tree and the depth of a node in it. */
+/** Tests for the height of a binary tree. */
 public class TreeHeightTest {
 
   @Test
@@ -25,30 +25,6 @@ public class TreeHeightTest {
   @Test
   public void heightCountsEdgesOnLongestPath() {
     assertEquals(3, TreeHeight.height(largeTree()));
-  }
-
-  @Test
-  public void rootHasDepthZero() {
-    Node<Integer> root = smallTree();
-    assertEquals(0, TreeHeight.depth(root, root, 0));
-  }
-
-  @Test
-  public void rightChildHasDepthOne() {
-    Node<Integer> root = smallTree();
-    assertEquals(1, TreeHeight.depth(root, root.right, 0));
-  }
-
-  @Test
-  public void deepestNodeHasDepthTwo() {
-    Node<Integer> root = smallTree();
-    assertEquals(2, TreeHeight.depth(root, root.left.left, 0));
-  }
-
-  @Test
-  public void nodeNotInTreeHasDepthNegativeOne() {
-    Node<Integer> other = new Node<>(42);
-    assertEquals(-1, TreeHeight.depth(smallTree(), other, 0));
   }
 
   // The four-node tree: 3 has left child 5 and right child 8; 5 has left child 1.
