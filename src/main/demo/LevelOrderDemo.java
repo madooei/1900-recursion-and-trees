@@ -1,16 +1,26 @@
-package tree;
+package demo;
 
 import list.List;
+import tree.LevelOrder;
+import tree.Node;
 
-/** A demo that builds the chapter's nine-node tree and runs every operation on it. */
-public final class Main {
+/** A demo of LevelOrder on the chapter's nine-node tree. */
+public final class LevelOrderDemo {
 
-  private Main() {
+  private LevelOrderDemo() {
     // This class should not be instantiated!
   }
 
   public static void main(String[] args) {
-    // Build the nine-node tree from the chapter, node by node.
+    Node<Integer> root = buildTree();
+
+    // One level at a time, left to right. Expect 5 8 2 9 1 4 7 6 3.
+    System.out.print("level-order: ");
+    printAll(LevelOrder.levelOrder(root));
+  }
+
+  // Builds the nine-node tree from the chapter and returns its root.
+  private static Node<Integer> buildTree() {
     Node<Integer> five = new Node<>(5);
     Node<Integer> eight = new Node<>(8);
     Node<Integer> two = new Node<>(2);
@@ -21,7 +31,6 @@ public final class Main {
     Node<Integer> six = new Node<>(6);
     Node<Integer> three = new Node<>(3);
 
-    // Link the nodes through their left and right references.
     five.left = eight;
     five.right = two;
     eight.left = nine;
@@ -30,22 +39,7 @@ public final class Main {
     two.right = seven;
     nine.left = six;
     seven.right = three;
-
-    Node<Integer> root = five;
-
-    // Measurements.
-    System.out.println("size:   " + TreeSize.size(root)); // expect 9
-    System.out.println("height: " + TreeHeight.height(root)); // expect 3
-    System.out.println("depth of 3: " + TreeDepth.depth(root, three)); // expect 3
-
-    System.out.print("pre-order:   ");
-    printAll(Traversals.preOrder(root));
-    System.out.print("in-order:    ");
-    printAll(Traversals.inOrder(root));
-    System.out.print("post-order:  ");
-    printAll(Traversals.postOrder(root));
-    System.out.print("level-order: ");
-    printAll(LevelOrder.levelOrder(root));
+    return five;
   }
 
   // Prints the values on one line, separated by spaces.
