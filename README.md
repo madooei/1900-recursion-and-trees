@@ -54,7 +54,7 @@ code/
 - `scripts/test.sh tree.TreeSizeTest` — compiles everything and runs only that test class. Use this while you are working on one class and the others are still empty.
 - `scripts/run.sh demo.TreeSizeDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `tree.Node<T>` — a binary-tree node: a value and references to its left and right subtrees, with `null` as the empty tree. There is no tree class; every operation is a static recursive method that takes a root node.
 - `tree.TreeSize` — `size`, the recursive count of the nodes in a tree.
